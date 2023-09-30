@@ -1,0 +1,25 @@
+$primary: #eb5939;
+$secondary: #A42286;
+$third: #3E5AA7;
+$main: #007BB4;
+
+$black: #0D0D0D;
+$white: #ffffff;
+$light: #B7AB98;
+
+$min-xs: 425px;
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 991px;
+$min-xl: 1200px;
+
+$theme-colors: ("primary": $primary,
+  "secondary": $secondary,
+  "third": $third,
+  "main": $main,
+  "light": $light,
+  "black": $black,
+  "white": $white);
+  .top-85{
+    top: 85% !important;
+  }

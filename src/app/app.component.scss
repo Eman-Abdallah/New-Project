@@ -1,0 +1,53 @@
+@import '../../theme/var';
+
+.box{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .circle{
+    background:$primary;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    position:absolute;    
+    transform:translate3d(-50%,-50%,0);
+    transition:all 0.5s cubic-bezier(.02,1.23,.79,1.08);
+    z-index: -1;  
+    &.circle-hovered{
+        width: 400px !important;
+        height: 400px !important;
+    }
+  }
+ .sign{
+  background-color: $primary;
+  color: $white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+  
+  h3{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 15px;
+  }
+ }
+ .audio-controls{ 
+  button{
+    span{
+
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      font-size: 15px;
+      color: $light;
+    }
+  }
+ }

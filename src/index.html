@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NewProject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/images/svg.svg" />
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <script>$(document).on("click mousemove", ".box", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    var newposX = x - 60;
+    var newposY = y - 60;
+    $(".circle").css(
+      "transform",
+      "translate3d(" + newposX + "px," + newposY + "px,0px)"
+    );
+  });
+
+
+  </script>
+</body>
+</html>

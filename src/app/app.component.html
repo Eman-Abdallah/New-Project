@@ -1,0 +1,33 @@
+
+<div class="container-fluid box position-relative">
+  <div class="circle"></div>
+  <!-- <app-loader></app-loader>
+  <app-start></app-start> -->
+<app-header></app-header>
+<app-main></app-main>
+<div class="sign position-fixed top-50 end-0">
+  <h2>W.</h2>
+  <h3>Site Of The Day</h3>
+</div>
+<div class="socials fixed-bottom">
+  <div class="d-flex flex-column">
+    <a href="" class="m-3"><img src="../assets/images/web.svg" alt="webpage"></a>
+    <a href="" class="m-3"><img src="../assets/images/instgram.svg" alt="instagram"></a>
+    <a href="" class="m-3"><img src="../assets/images/play.svg" alt="youtube"></a>
+    <a href="" class="m-3"><img src="../assets/images/linkidin.svg" alt="linkedin"></a>   
+  </div>
+</div>
+
+<app-main></app-main>
+<div class="audio-controls position-fixed top-85 end-0">
+  <button class="btn" (click)="onPlayClick(audio)"> 
+    <span>
+      Sound {{ !isPaused ? "Off" : "On" }}
+    </span>
+  </button>
+  <audio  #audio (pause)="onPause()">
+    <source src="../assets/audio/MA_Awesomemusic_ModernInterior.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+  </audio>
+  </div>
+</div>
