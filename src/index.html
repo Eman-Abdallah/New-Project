@@ -6,24 +6,76 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/svg.svg" />
-  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+<script >
+  let typeSplit;
+// Split the text up
+function runSplit() {
+  typeSplit = new SplitType(".split-lines", {
+    types: "lines, words"
+  });
+  $(".line").append("<div class='line-mask'></div>");
+  createAnimation();
+}
+runSplit();
+// Update on window resize
+let windowWidth = $(window).innerWidth();
+window.addEventListener("resize", function () {
+  if (windowWidth !== $(window).innerWidth()) {
+    windowWidth = $(window).innerWidth();
+    typeSplit.revert();
+    runSplit();
+  }
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+function createAnimation() {
+  $(".line").each(function (index) {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        // trigger element - viewport
+        start: "top center",
+        end: "bottom center",
+        scrub: 1
+      }
+    });
+    tl.to($(this).find(".line-mask"), {
+      width: "0%",
+      duration: 1
+    });
+  });
+}
+  //add active class to a on scroll
+  $(window).scroll(function() {
+		var windscroll = $(window).scrollTop();
+		if (windscroll >= 100) {
+			$('section').each(function(i) {
+        // The number at the end of the next line is how pany pixels you from the top you want it to activate.
+				if ($(this).position().top <= windscroll - 0) {
+					$('.link').removeClass('active');
+					$('.link').eq(i).addClass('active');
+				}
+			});
+
+		} else {
+
+			$('.link.active').removeClass('active');
+			$('.link:first').addClass('active');
+		}
+
+		}).scroll();
+</script>
 </head>
 <body>
   <app-root></app-root>
-  <script>$(document).on("click mousemove", ".box", function (e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    var newposX = x - 60;
-    var newposY = y - 60;
-    $(".circle").css(
-      "transform",
-      "translate3d(" + newposX + "px," + newposY + "px,0px)"
-    );
-  });
 
 
-  </script>
+
 </body>
 </html>

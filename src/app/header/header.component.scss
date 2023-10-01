@@ -1,13 +1,16 @@
-@import '../../theme/var';
+@import '../../../theme/var';
 header{
     padding: 20px;
     .list{
         .nav-item{
             padding: 0px;
+
+            }
              .link{
                     height: 30px;
                     align-items: center;
                     color: #968D7A;
+                    opacity: 0.7;
                     text-decoration: none;
                     display: flex;                 
                   /* Hide extra text */
@@ -17,15 +20,12 @@ header{
                     height: 20px;                 
                     /*  Remove overflow to see how it works　:) */
                     overflow: hidden;
-                  }
-                  
+                  }                  
                   .link-container {
                     transition: transform 0.4s ease;
                   }
-                  
                   .title {
-                    display: block;
-                  
+                    display: block;                  
                     /*  Set same font-size and line height  */
                     font-size: 15px;
                     line-height: 20px;
@@ -41,12 +41,8 @@ header{
                     transform-origin: left center;
                     transform: rotate(20deg);
                     color: $light;
-                  }
-
-                  
-
-                  /* Hover Action*/
-                  
+                  }                 
+                  /* Hover Action*/                  
                   /* Move up two texts (20px = font-size) */
                   &:hover .link-container {
                     transform: translateY(-20px);
@@ -60,8 +56,11 @@ header{
                   &:hover .link-title2 {
                     transform: rotate(0);
                   }
+                  &.active{    
+                    color: $light;        
+                      opacity: 1;                    
+                  }
                   
             }
         }
     }
-}

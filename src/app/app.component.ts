@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,28 +6,17 @@ import { Component, ElementRef, ViewChildren } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChildren('audio') audioElms!: ElementRef;
-src!: string;
-isPaused = false;
-  ngOnInit(): void {
-    var sound=document.querySelector('audio');
-    if(sound){
-      sound.play();
-    }
+  positionX: number = 0;
+  positionY: number = 0;
+  handleMouseMove(event: MouseEvent) {
+    this.positionX = event.clientX;
+    this.positionY = event.clientY+100;
   }
-  onPlayClick(audio: HTMLAudioElement) {
-    if (!this.isPaused) {
-     audio.play();
-     this.isPaused = true;
-    } else {
-     audio.pause();
-     this.isPaused = false;
-    }
-   }
-   
-    onPause() {
-     this.isPaused = false;
-    }
+  ngOnInit() {
+ 
+  }
+
+  
 }
 
 

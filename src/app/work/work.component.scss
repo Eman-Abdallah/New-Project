@@ -1,0 +1,133 @@
+@import'../../../theme/var';
+.work{   
+    padding-bottom: 150px;
+    transition: all 1s ease-in-out;
+    // height: 100vh;
+    .what-do{
+      padding: 150px 0;
+    }
+    .experience{
+      padding:300px 0;
+    }
+    h3{
+        font-size: 15px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }
+    h4{
+        font-size: 7rem;
+        line-height: .8;
+        font-weight: 600;
+        display: block;
+        color: $light;
+    }
+    h5{
+        font-size: 2.5rem;
+        line-height: .8;
+        font-weight: 600;
+        display: block;
+        color: $light;
+    }
+    .list-small{
+      font-size: 2.5rem;
+      line-height: .8;
+      font-weight: 600;
+    }
+}
+.material-bubble{
+  color: $light;  
+  border-top: 1px solid hsla(37,18%,66%,.15);
+  position: relative;
+  padding: 20px;
+  .text-hidden{
+    display: none;
+    max-width: 400px;
+    transition: opacity 0.8s ease-in-out;
+  }
+  .masked{
+    display: none;
+  }
+  &:hover{
+    h4{
+        color: #000;
+    }
+    .text-hidden{
+      display: block;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+h5{
+  display: none;
+
+}
+.masked{
+  display: block;
+  color: #000;
+}
+p{
+  color: #000;
+}
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.8s ease-in-out;
+  }
+  &:hover::before{
+    opacity: 0;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    transform:  scale(0);
+    opacity: 0;
+    z-index: -1;
+    transition: transform .5s, opacity 0.3s, background-color 0.3s;
+  }
+  &:hover::after{
+    opacity: 1;
+    transform: scale(1) ;
+  }
+}
+.experience{
+  background-image: url(../../assets/images/work-2400.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  background-size: cover;
+  transition: all 1s ease-in-out;
+  h3{
+      font-size: 15px;
+      letter-spacing: 7px;
+      text-transform:uppercase ;
+  }
+
+}
+.history{
+  padding-top: 100px;
+}
+.split-lines{
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+      display: block;
+color: $light;
+}
+.client{
+  background-image: url(../../assets/images/planet-1-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  // position: relative;
+  // z-index: -1;
+}
