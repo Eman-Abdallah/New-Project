@@ -1,60 +1,38 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>NewProject</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/images/svg.svg" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<meta charset="utf-8">
+	<title>NewProject</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="assets/images/svg.svg" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
+
 <body>
-  <app-root></app-root>
-<script>
-// 	  $(document).ready(function () {
-// 	  // Mouse Cursor Animation
-// 	  const ball = document.querySelector(".ball");
-// 	  gsap.set(ball, { xPercent: -50, yPercent: -50 });
-  
-//   const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-//   const mouse = { x: pos.x, y: pos.y };
-//   const speed = 0.08;
+	<app-root></app-root>
+	<script>
+		//add active class to a on scroll
+		$(window).scroll(function () {
+			var windscroll = $(window).scrollTop();
+			if (windscroll >= 100) {
+				$('section').each(function (i) {
+					// The number at the end of the next line is how pany pixels you from the top you want it to activate.
+					if ($(this).position().top <= windscroll - 0) {
+						$('.link').removeClass('active');
+						$('.link').eq(i).addClass('active');
+					}
+				});
 
-//   const xSet = gsap.quickSetter(ball, "x", "px");
-//   const ySet = gsap.quickSetter(ball, "y", "px");
+			} else {
 
-//   window.addEventListener("mousemove", (e) => {
-//     mouse.x = e.x;
-//     mouse.y = e.y;
-//   });
-//   gsap.ticker.add(() => {
-//     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-//     pos.x += (mouse.x - pos.x) * dt;
-//     pos.y += (mouse.y - pos.y) * dt;
-//     xSet(pos.x);
-//     ySet(pos.y);
-//   });
-// 	  });
-    //add active class to a on scroll
-    $(window).scroll(function() {
-		var windscroll = $(window).scrollTop();
-		if (windscroll >= 100) {
-			$('section').each(function(i) {
-        // The number at the end of the next line is how pany pixels you from the top you want it to activate.
-				if ($(this).position().top <= windscroll - 0) {
-					$('.link').removeClass('active');
-					$('.link').eq(i).addClass('active');
-				}
-			});
-
-		} else {
-
-			$('.link.active').removeClass('active');
-			$('.link:first').addClass('active');
-		}
+				$('.link.active').removeClass('active');
+				$('.link:first').addClass('active');
+			}
 
 		}).scroll();
-</script>
+	</script>
 </body>
+
 </html>
