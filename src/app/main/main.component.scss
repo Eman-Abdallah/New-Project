@@ -35,6 +35,9 @@ h1 {
     z-index: 100;
     transition: all 1s ease-in-out;
     animation: myAnim 2s ease 0s 1 normal forwards;
+    &:hover{
+        color: $black;
+    }
 }
 
 .h1-hovered {

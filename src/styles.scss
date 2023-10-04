@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import'../theme/theme.scss';
-html {
-    scroll-behavior: smooth;
-  }
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +8,7 @@ html {
     text-decoration: none;
 }
 body{
+    scroll-behavior: smooth;
     font-family: 'poppins-regular' !important;
     direction: ltr;
     background-color: #0D0D0D;

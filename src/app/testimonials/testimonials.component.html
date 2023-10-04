@@ -1,4 +1,4 @@
-<section class="container-fluid   testimonials">
+<div class="container-fluid   testimonials">
   <div class="row  justify-content-center testimonial align-items-center">
     <div class="col-md-8 ">
       <swiper [spaceBetween]="10" [navigation]="false" [loop]="true" [autoplay]="{delay: 500,
@@ -77,11 +77,12 @@
       </swiper>
     </div>
   </div>
-     <div class="row justify-content-center   align-items-center motto">
-    <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
-      <h3 class="about-heading">MY MOTTO</h3>
-      <div class="split-lines" [innerHtml]="motto"></div>
-      <h3 class="about-heading">{{name}}</h3>
-    </div>
+
+</div>
+   <section class="row justify-content-center   align-items-center motto" id="contact">
+  <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+    <h3 class="about-heading">MY MOTTO</h3>
+    <div class="split-lines" [innerHtml]="motto"></div>
+    <h3 class="about-heading">{{name}}</h3>
   </div>
 </section>
