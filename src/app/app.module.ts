@@ -9,18 +9,9 @@ import { MainComponent } from './main/main.component';
 import { AudioComponent } from './audio/audio.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
-// import SplitType from 'split-type';
-
-
-
-
-// import ScrollTrigger from 'gsap/dist/ScrollTrigger.min.js';
-
-
-
-// import { ScrollTriggerModule } from 'gsap/ScrollTrigger';
-// import { gsap } from 'gsap';
-
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { SwiperModule } from 'swiper/angular';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +21,14 @@ import { WorkComponent } from './work/work.component';
     MainComponent,
     AudioComponent,
     AboutComponent,
-    WorkComponent
+    WorkComponent,
+    TestimonialsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //   SplitType,
-    //   ScrollTrigger,
-    // // gsap.registerPlugin(ScrollTrigger)
+    [SwiperModule]
 
   ],
   providers: [],

@@ -1,0 +1,87 @@
+<section class="container-fluid   testimonials">
+  <div class="row  justify-content-center testimonial align-items-center">
+    <div class="col-md-8 ">
+      <swiper [spaceBetween]="10" [navigation]="false" [loop]="true" [autoplay]="{delay: 500,
+        disableOnInteraction: false}" [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+        <ng-template swiperSlide>
+          <div class="first d-flex align-items-start gap-3">
+            <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
+            <div>
+              <h5 class="mb-4">
+                Minh is seriously <br>
+                the best and he <br>
+                never complain
+              </h5>
+              <h6 class="name">Michael Glass</h6>
+              <h6>Group Design Director</h6>
+              <h6>Fantasy Interactive</h6>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="first d-flex align-items-start gap-3">
+            <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
+            <div>
+              <h5 class="mb-4">
+                This looks <br>
+                amazing. <br>
+                great work!
+              </h5>
+              <h6 class="name">Peter Smart</h6>
+              <h6>Head Of Product</h6>
+              <h6>Fantasy Interactive</h6>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="first d-flex align-items-start gap-3">
+            <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
+            <div>
+              <h5 class="mb-4">
+                He's a beast. <br>
+                his skills are <br>
+                insane!
+              </h5>
+              <h6 class="name">Linh Le</h6>
+              <h6>Project Manager</h6>
+              <h6>Interactive Labs</h6>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+    <div class="col-md-2 text-center ">
+      <swiper (swiper)="thumbsSwiper = $event" [spaceBetween]="10" [slidesPerView]="4" [freeMode]="true"
+        [watchSlidesProgress]="true" class="mySwiper swiper-vertical">
+        <ng-template swiperSlide>
+          <div class="image ">
+            <img src="../../assets/images/michael-glass.jpg" width="80" class="img-fluid" alt="michael-glass">
+            <div class="overlay ">
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="image">
+            <img src="../../assets/images/peter-smart.jpg" width="80" class="img-fluid" alt="peter-smart">
+            <div class="overlay ">
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="image">
+            <img src="../../assets/images/linh-le.jpg" width="80" class="img-fluid" alt="linh-le.jpg">
+            <div class="overlay ">
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+     <div class="row justify-content-center   align-items-center motto">
+    <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+      <h3 class="about-heading">MY MOTTO</h3>
+      <div class="split-lines" [innerHtml]="motto"></div>
+      <h3 class="about-heading">{{name}}</h3>
+    </div>
+  </div>
+</section>

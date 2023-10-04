@@ -1,66 +1,108 @@
 @import '../../../theme/var';
-header{
-    padding: 20px;
-    .list{
-        .nav-item{
-            padding: 0px;
 
-            }
-             .link{
-                    height: 30px;
-                    align-items: center;
-                    color: #968D7A;
-                    opacity: 0.7;
-                    text-decoration: none;
-                    display: flex;                 
-                  /* Hide extra text */
-                  .mask {
-                    position: relative;
-                    padding: 0;
-                    height: 20px;                 
-                    /*  Remove overflow to see how it works　:) */
-                    overflow: hidden;
-                  }                  
-                  .link-container {
-                    transition: transform 0.4s ease;
-                  }
-                  .title {
-                    display: block;                  
-                    /*  Set same font-size and line height  */
-                    font-size: 15px;
-                    line-height: 20px;
-                    font-weight: 600;
-                    transition: transform 0.4s ease;
-                  }
-                  
-                  .link-title1 {
-                    transform-origin: right center;
-                  }
-                  
-                  .link-title2 {
-                    transform-origin: left center;
-                    transform: rotate(20deg);
-                    color: $light;
-                  }                 
-                  /* Hover Action*/                  
-                  /* Move up two texts (20px = font-size) */
-                  &:hover .link-container {
-                    transform: translateY(-20px);
-                  }
-                  
-                  /* Rotate texts a little bit */
-                  &:hover .link-title1 {
-                    transform: rotate(20deg);
-                  }
-                  
-                  &:hover .link-title2 {
-                    transform: rotate(0);
-                  }
-                  &.active{    
-                    color: $light;        
-                      opacity: 1;                    
-                  }
-                  
-            }
-        }
+header {
+  padding: 20px;
+
+  .logo {
+
+
+    transition: transform .5s ease-in-out;
+
+    &:hover {
+      transform: scale(1) translateY(-20px);
+
+      img {
+        animation: bouncing 0.5s .3s;
+      }
     }
+  }
+
+  .list {
+    .nav-item {
+      padding: 0px;
+
+    }
+
+    .link {
+      height: 30px;
+      align-items: center;
+      color: #968D7A;
+      opacity: 0.7;
+      text-decoration: none;
+      display: flex;
+
+      /* Hide extra text */
+      .mask {
+        position: relative;
+        padding: 0;
+        height: 20px;
+        /*  Remove overflow to see how it works　:) */
+        overflow: hidden;
+      }
+
+      .link-container {
+        transition: transform 0.4s ease;
+      }
+
+      .title {
+        display: block;
+        /*  Set same font-size and line height  */
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        transition: transform 0.4s ease;
+      }
+
+      .link-title1 {
+        transform-origin: right center;
+      }
+
+      .link-title2 {
+        transform-origin: left center;
+        transform: rotate(20deg);
+        color: $light;
+      }
+
+      /* Hover Action*/
+      /* Move up two texts (20px = font-size) */
+      &:hover .link-container {
+        transform: translateY(-20px);
+      }
+
+      /* Rotate texts a little bit */
+      &:hover .link-title1 {
+        transform: rotate(20deg);
+      }
+
+      &:hover .link-title2 {
+        transform: rotate(0);
+      }
+
+      &.active {
+        color: $light;
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+@keyframes bouncing {
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}

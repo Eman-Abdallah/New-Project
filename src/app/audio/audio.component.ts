@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 export class AudioComponent implements OnInit {
 src!: string;
-isPaused = false;
+isPaused = true;
   ngOnInit() {
   }
   onPlayClick(e:Event,audio: HTMLAudioElement) {

@@ -8,15 +8,18 @@ import { Component, ElementRef, HostListener, OnInit, ViewChildren } from '@angu
 export class AppComponent {
   positionX: number = 0;
   positionY: number = 0;
+  loader: boolean = true;
   handleMouseMove(event: MouseEvent) {
     this.positionX = event.clientX;
-    this.positionY = event.clientY+100;
+    this.positionY = event.clientY;
   }
   ngOnInit() {
- 
+
   }
 
-  
+  addItem(e: any) {
+    this.loader = e;
+  }
 }
 
 

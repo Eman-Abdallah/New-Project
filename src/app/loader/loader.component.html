@@ -1,17 +1,17 @@
-<div class="container-fluid " style="height: 100vh;"  *ngIf="showLoader">
-<div class="row  justify-content-center align-items-center h-100">
-<div class="col-5 d-flex justify-content-center align-items-center flex-column">
-    
-    <div class="progress blue">
+<div class="container-fluid " style="height: 100vh;  background-color: #0D0D0D;" *ngIf="showLoader">
+  <div class="row  justify-content-center align-items-center h-100">
+    <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
+
+      <div class="progress blue">
         <span class="progress-left">
           <span class="progress-bar"></span>
         </span>
         <span class="progress-right">
-            <span class="progress-bar"></span>
+          <span class="progress-bar"></span>
         </span>
         <img src="../../assets/images/logo.gif" alt="logo" class="progress-img img-fluid" width="50px" height="50px">
         <div class="progress-value">{{percent}}%</div>
-    </div>
       </div>
-</div>
+    </div>
+  </div>
 </div>

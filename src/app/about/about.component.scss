@@ -1,33 +1,52 @@
 @import'../../../theme/var';
-.about{   
-    padding: 150px;
-    padding-bottom: 150px;
-    height: 100vh;
-    transition: all 1s ease-in-out;
-    background-color: #0D0D0D;
-    h3{
-        font-size: 15px;
-        letter-spacing: 7px;
-    }
-    .split-lines{
-        font-size: 3.5rem;
-        line-height: 1.2;
-        font-weight: 600;
-            display: block;
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+  background-color: #0D0D0D;
+
+  h3 {
+    font-size: 15px;
+    letter-spacing: 7px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .split-lines {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    display: block;
     color: $light;
-    }
+    position: relative;
+    z-index: 100;
+    transition: all 1s ease-in-out;
+  }
 }
 
-  .line {
-    position: relative;
+.line {
+  position: relative;
+}
+
+.line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.65;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: black;
+}
+
+@media screen and(max-width:500px) {
+  .about {
+    padding: 50px 20px;
+
+    .split-lines {
+      font-size: 2.5rem;
+    }
   }
-  .line-mask {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0.65;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    background-color: black;
-  }
+}

@@ -8,10 +8,87 @@ html {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-decoration: none;
 }
 body{
     font-family: 'poppins-regular' !important;
     direction: ltr;
     background-color: #0D0D0D;
     color: $light;
+    cursor: context-menu;
+}
+.mySwiper{
+    margin-top: 100px;
+    .swiper-slide{
+        padding-left: 20px !important;
+    .image {
+        position: relative;
+        margin-bottom: 20px;
+        width: 80px;
+        img{
+            margin-left: 20px;
+        }
+        .overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            inset: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            left: 20px;
+        }
+    
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-left: 0px solid transparent;
+            border-right: 12px solid #eb5939;
+            border-bottom: 12px solid transparent;
+            top: 26px;
+            left: 0px;
+            display: none;
+        }
+    
+    
+    }
+    &.swiper-slide-thumb-active{
+        .image{
+     
+            .overlay {
+                display: none;
+            }
+     
+            &::before {
+                display: block;
+            }
+        }
+         
+     }
+    }
+}
+
+@media screen and(max-width:800px) {
+    .mySwiper{
+        margin-top: -100px;
+     }
+}
+@media screen and(max-width:500px) {
+    .mySwiper{
+        .swiper-wrapper{
+            flex-direction: row !important;
+            .swiper-slide{
+                .image {
+                
+                    &::before {
+                        display: none;
+                    }
+                
+                
+                }
+            }
+        }
+     }
 }

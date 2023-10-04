@@ -7,52 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/svg.svg" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+<script>
+// 	  $(document).ready(function () {
+// 	  // Mouse Cursor Animation
+// 	  const ball = document.querySelector(".ball");
+// 	  gsap.set(ball, { xPercent: -50, yPercent: -50 });
+  
+//   const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+//   const mouse = { x: pos.x, y: pos.y };
+//   const speed = 0.08;
 
-<script >
-  let typeSplit;
-// Split the text up
-function runSplit() {
-  typeSplit = new SplitType(".split-lines", {
-    types: "lines, words"
-  });
-  $(".line").append("<div class='line-mask'></div>");
-  createAnimation();
-}
-runSplit();
-// Update on window resize
-let windowWidth = $(window).innerWidth();
-window.addEventListener("resize", function () {
-  if (windowWidth !== $(window).innerWidth()) {
-    windowWidth = $(window).innerWidth();
-    typeSplit.revert();
-    runSplit();
-  }
-});
+//   const xSet = gsap.quickSetter(ball, "x", "px");
+//   const ySet = gsap.quickSetter(ball, "y", "px");
 
-gsap.registerPlugin(ScrollTrigger);
-
-function createAnimation() {
-  $(".line").each(function (index) {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: $(this),
-        // trigger element - viewport
-        start: "top center",
-        end: "bottom center",
-        scrub: 1
-      }
-    });
-    tl.to($(this).find(".line-mask"), {
-      width: "0%",
-      duration: 1
-    });
-  });
-}
-  //add active class to a on scroll
-  $(window).scroll(function() {
+//   window.addEventListener("mousemove", (e) => {
+//     mouse.x = e.x;
+//     mouse.y = e.y;
+//   });
+//   gsap.ticker.add(() => {
+//     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+//     pos.x += (mouse.x - pos.x) * dt;
+//     pos.y += (mouse.y - pos.y) * dt;
+//     xSet(pos.x);
+//     ySet(pos.y);
+//   });
+// 	  });
+    //add active class to a on scroll
+    $(window).scroll(function() {
 		var windscroll = $(window).scrollTop();
 		if (windscroll >= 100) {
 			$('section').each(function(i) {
@@ -71,11 +56,5 @@ function createAnimation() {
 
 		}).scroll();
 </script>
-</head>
-<body>
-  <app-root></app-root>
-
-
-
 </body>
 </html>

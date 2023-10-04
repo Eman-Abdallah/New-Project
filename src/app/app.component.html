@@ -1,12 +1,18 @@
+<div class="container-fluid position-relative" *ngIf="loader">
 
-<div class="container-fluid  position-relative  layout px-0" (mousemove)="handleMouseMove($event)" >
-  <div class="circle" [style.left.px]="positionX" [style.top.px]="positionY">
+  <app-loader></app-loader>
+  <app-start (loader)="addItem($event)"></app-start>
 </div>
-  <!-- <app-loader></app-loader>
-  <app-start></app-start> -->
-<app-header></app-header>
-<app-audio></app-audio>
-<app-main></app-main>
-<app-about></app-about>
-<app-work></app-work>
+<div class="container-fluid  position-relative  layout px-0" (mousemove)="handleMouseMove($event)" *ngIf="!loader">
+
+  <div class="circle" [style.left.px]="positionX" [style.top.px]="positionY">
   </div>
+
+  <app-header></app-header>
+  <app-audio></app-audio>
+  <app-main></app-main>
+  <app-about></app-about>
+  <app-work></app-work>
+  <app-testimonials></app-testimonials>
+  <app-footer></app-footer>
+</div>

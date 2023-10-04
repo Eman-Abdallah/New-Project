@@ -1,69 +1,89 @@
 @import'../../../theme/var';
-.sign{
-    background-color: $primary;
-    color: $white;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    h2{
-      font-size: 18px;
-      font-weight: 600;
+
+.sign {
+  background-color: $primary;
+  color: $white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
   }
-    
-    h3{
+
+  h3 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 15px;
+  }
+}
+
+.audio-controls {
+  right: 1%;
+
+  button {
+    span {
+
       writing-mode: vertical-rl;
       text-orientation: mixed;
       transform: rotate(180deg);
       font-size: 15px;
+      color: $light;
     }
-   }
-   .audio-controls{ 
-    right: 1%;
-    button{
-      span{
-  
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        transform: rotate(180deg);
-        font-size: 15px;
-        color: $light;
-      }
-    }
-   }
-   .socials{
-    width: 100px;
-    position: fixed;
-    right: 0;
-    bottom: 42px;
-    left: 16px;
-    z-index: 1030;
-
-   }
-   .btn-check:focus + .btn, .btn:focus {
-    outline: 0;
-    box-shadow: none !important;
+  }
 }
-.center-shape{
+
+.socials {
+  width: 100px;
+  position: fixed;
+  right: 0;
+  bottom: 42px;
+  left: 16px;
   z-index: 1030;
-  .hand{
+
+  a {
+    transform: translate(0px);
+    transition: transform .5s ease-in-out;
+
+    &:hover {
+      transform: translate(10px, 10px);
+    }
+  }
+
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.center-shape {
+  z-index: 1030;
+
+  .hand {
     position: absolute;
     left: 33px;
     top: 28px;
   }
 }
-.loading-spinner{
+
+.loading-spinner {
 
   animation: loading-spinner 2s linear infinite
 }
 
-@keyframes loading-spinner{
+@keyframes loading-spinner {
 
-  from{
+  from {
 
-      transform: rotate(0deg)
+    transform: rotate(0deg)
   }
-  to{
 
-      transform: rotate(360deg)
+  to {
+
+    transform: rotate(360deg)
   }
 }

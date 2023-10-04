@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  aboutText:string=`
+  aboutText: string = `
   <p class="line">I’m a <strong class="text-primary">selectively skilled</strong>  product</p> 
   <p class="line"> designer with strong focus on </p>
   <p class="line"> producing high quality & </p>
@@ -17,8 +17,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  handleTextHover(){    
-    this.aboutText=`
+  handleTextHover() {
+    this.aboutText = `
     A visual  <strong >Designer-with skills</strong>  that <br>
     haven't been replaced by A.I <br>
     (yet)-making good shit only if   <br>
@@ -26,9 +26,9 @@ export class AboutComponent implements OnInit {
   `
     document.querySelector('.circle')?.classList.add('circle-hovered');
   }
-  removeClass(){
+  removeClass() {
     document.querySelector('.circle')?.classList.remove('circle-hovered');
- this.aboutText=  `
+    this.aboutText = `
  I’m a <strong class="text-primary">selectively skilled</strong>  product <br>
  designer with strong focus on <br>
  producing high quality & <br>

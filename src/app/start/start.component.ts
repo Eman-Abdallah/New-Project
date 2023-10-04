@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-start',
@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
   startWebpage:boolean=true;
+  @Output() loader = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
   }
   startProject(){
     this.startWebpage=false;
+    this.loader.emit(false);
   }
 }

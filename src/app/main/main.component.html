@@ -1,13 +1,14 @@
-<section class="main-section">
+<section class="main-section" id="about">
 
-<div class=" d-flex justify-content-center main-section text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
-    <video id="background-video" autoplay loop muted >
-        <source src="../../assets/video/pexels-pavel-danilyuk-5495781 (1440p).mp4" type="video/mp4">
+    <div class=" d-flex justify-content-center main-section ">
+        <video id="background-video" autoplay loop muted>
+            <source src="../../assets/video/pexels-pavel-danilyuk-5495781 (1440p).mp4" type="video/mp4">
         </video>
-    <div class=" text-center  pt-4" style="max-width: 550px;" >
-        <h6 class="name mb-4">MINA PHAM</h6>
-        <h1 [innerHtml]="heading"></h1>
+        <div class=" text-center text pt-4" style="max-width: 550px;" (mouseover)="handleTextHover()"
+            (mouseout)="removeClass()">
+            <h6 class="name mb-4">MINA PHAM</h6>
+            <h1 [innerHtml]="heading"></h1>
+        </div>
     </div>
-</div>
 
-  </section>
+</section>

@@ -7,23 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
- heading:string=` <span class="not-masked">
-<span >MAKING</span>                           
+  heading: string = ` <span class="not-masked">
+<span class="slide-text">MAKING</span>                           
 <br>
-<span  class="text-primary">GOOD</span>  
+<span  class="slide-text text-primary">GOOD</span>  
 <br>
-<span class="class=" text-primary">SHIT</span>  
+<span class="class="slide-text text-primary">SHIT</span>  
 <br>
-<span >SINCE</span>
+<span class="slide-text">SINCE</span>
 <br>
-<span >2009</span>
+<span class="slide-text">2009</span>
 </span>`
   constructor() { }
 
   ngOnInit(): void {
   }
-  handleTextHover(){    
-    this.heading=`
+  handleTextHover() {
+    this.heading = `
     <span class="masked">
 <span >HIDING</span>                           
 <br>
@@ -38,18 +38,18 @@ export class MainComponent implements OnInit {
     `
     document.querySelector('.circle')?.classList.add('circle-hovered');
   }
-  removeClass(){
+  removeClass() {
     document.querySelector('.circle')?.classList.remove('circle-hovered');
-    this.heading=` <span class="not-masked">
-    <span >MAKING</span>                           
+    this.heading = ` <span class="not-masked">
+    <span class="slide-text">MAKING</span>                           
     <br>
-    <span class=" text-primary">GOOD</span>  
+    <span class="slide-text text-primary">GOOD</span>  
     <br>
-    <span class=" text-primary">SHIT</span>  
+    <span class="slide-text text-primary">SHIT</span>  
     <br>
-    <span >SINCE</span>
+    <span class="slide-text">SINCE</span>
     <br>
-    <span >2009</span>
+    <span class="slide-text">2009</span>
     </span>`
   }
 

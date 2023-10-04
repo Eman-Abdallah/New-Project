@@ -1,0 +1,93 @@
+@import'../../../theme/var';
+
+.testimonials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .testimonial {
+        height: 100vh;
+    }
+}
+
+h3 {
+    font-size: 15px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+}
+
+.first {
+    padding: 65px 0;
+    border-top: 1px solid hsla(37, 18%, 66%, .15);
+    border-bottom: 1px solid hsla(37, 18%, 66%, .15);
+
+    h5 {
+        font-size: 4rem;
+    }
+
+    h6 {
+        color: #968D7A;
+        opacity: 0.7;
+
+        &.name {
+            color: $light;
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.motto {
+    margin-top: 100px;
+    background-image: url(../../assets/images/banner-bottom-2400.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    text-align: center;
+
+    h3 {
+        font-size: 15px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }
+}
+
+.split-lines {
+    font-size: 8rem;
+    text-transform: uppercase;
+    z-index: 100 !important;
+    line-height: .9;
+    font-weight: bold;
+    position: relative;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scaleY(0.4);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@media screen and(max-width:500px) {
+    .first {
+
+
+        h5 {
+            font-size: 2rem;
+        }
+    }
+
+    .split-lines {
+        font-size: 2rem;
+
+    }
+}
