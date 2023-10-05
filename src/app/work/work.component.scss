@@ -56,7 +56,7 @@
   border-top: 1px solid hsla(37, 18%, 66%, .15);
   position: relative;
   padding: 20px;
-
+display: block;
   .text-hidden {
     display: none;
     max-width: 400px;
@@ -155,14 +155,9 @@
   }
 
 }
-
 .history {
   padding-top: 100px;
   background-color: #0A0A0A;
-  // h4{
-  //   font-size: 9rem;
-  //   font-weight: bold;
-  // }
 }
 .pricing{
   padding-top: 300px;
