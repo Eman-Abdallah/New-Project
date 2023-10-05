@@ -1,9 +1,7 @@
 @import'../../../theme/var';
 
 .testimonials {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
+    padding-top: 200px;
     .testimonial {
         height: 100vh;
     }
@@ -40,8 +38,7 @@ h3 {
 
 
 .motto {
-    margin-top: 100px;
-    background-image: url(../../assets/images/banner-bottom-2400.jpg);
+    background-image: url(../../assets/images/3d-rendered-businessman-front-light-character.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -53,18 +50,35 @@ h3 {
         font-size: 15px;
         letter-spacing: 7px;
         text-transform: uppercase;
+        mix-blend-mode: difference;
     }
 }
 
 .split-lines {
-    font-size: 8rem;
+    font-size: 3rem;
     text-transform: uppercase;
     z-index: 100 !important;
     line-height: .9;
     font-weight: bold;
+    text-align: start;
     position: relative;
-    animation: myAnim 2s ease 0s 1 normal forwards;
     transition: all 1s ease-in-out;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    mix-blend-mode: difference;
+    .not-masked{
+        display: block;
+    }
+    .masked{
+        display: none;
+    }
+    &:hover{
+    .not-masked{
+        display: none;
+    }
+    .masked{
+        display: block;
+    }
+    }
 }
 
 @keyframes myAnim {
@@ -76,7 +90,11 @@ h3 {
         transform: scaleY(1);
     }
 }
-
+@media screen and(max-width:1200px) {
+    .testimonials{
+        padding-top: 0;
+    }
+}
 @media screen and(max-width:500px) {
     .first {
 

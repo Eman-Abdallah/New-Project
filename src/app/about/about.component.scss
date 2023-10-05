@@ -5,42 +5,52 @@
   padding-bottom: 150px;
   height: 100vh;
   transition: all 1s ease-in-out;
-  background-color: #0D0D0D;
+  background-color: #060606;
 
   h3 {
     font-size: 15px;
     letter-spacing: 7px;
     position: relative;
     z-index: 100;
+    mix-blend-mode: difference;
   }
 
   .split-lines {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    font-weight: 600;
+    font-size: 3.7rem;
+    line-height: 1.1;
+    font-weight: bold;
     display: block;
     color: $light;
     position: relative;
     z-index: 100;
     transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
+    .not-masked{
+      display: block;
+  }
+  .masked{
+      display: none;
+  }
+&:hover{
+  .not-masked{
+      display: none;
+  }
+  .masked{
+      display: block;
+  }
+}
   }
 }
 
-.line {
-  position: relative;
-}
 
-.line-mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.65;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  background-color: black;
-}
+@media screen and(max-width:800px) {
+  .about {
 
+    .split-lines {
+      font-size: 3rem;
+    }
+  }
+}
 @media screen and(max-width:500px) {
   .about {
     padding: 50px 20px;

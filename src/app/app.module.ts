@@ -23,12 +23,14 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     WorkComponent,
     TestimonialsComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    [SwiperModule]
+    [SwiperModule],
+
 
   ],
   providers: [],

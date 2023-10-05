@@ -4,26 +4,30 @@
             <h3 class="work-heading">WHAT I DO</h3>
             <div class="">
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4>3D</h4>
+                    <h4 class="split-line">3D</h4>
                     <p class="text-hidden">I can produce anything that my 16” laptop can render</p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4>VISUAL</h4>
+                    <h4  class="split-line">UI-UX</h4>
                     <p class="text-hidden">I search the internet for visual references and then combine them to create
                         my own work.</p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4>MOTION</h4>
+                    <h4  class="split-line">VISUAL</h4>
                     <p class="text-hidden">I use fancy motion that makes my design more interesting than it actually is
                     </p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4>PRODUCT</h4>
+                    <h4  class="split-line">MOTION</h4>
                     <p class="text-hidden">I utilize common design best practices, test, and re-iterate until it works
                         (hopefully).</p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4>TUTORIAL</h4>
+                    <h4  class="split-line">PUBLICATION</h4>
+                    <p class="text-hidden">I thought I’d make millions of $ from Youtube but I didn’t</p>
+                </div>
+                <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
+                    <h4  class="split-line">VOICE OVER</h4>
                     <p class="text-hidden">I thought I’d make millions of $ from Youtube but I didn’t</p>
                 </div>
 
@@ -34,9 +38,21 @@
         </div>
     </div>
     <div class="row justify-content-center h-100  align-items-center experience">
-        <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+        <div class="col-md-10 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
             <h3 class="about-heading">experience</h3>
-            <div class="split-lines" [innerHtml]="experience">
+            <div class="split-lines">
+                <p class=" not-masked">
+                    WITH OVER A DECADE OF EXPERIENCE IN THE INDUSTRY,
+                    OUR TEAM OF EXPERTS HAS HONED THEIR SKILLS AND
+                    DEVELOPED A <strong class="text-primary"> KEEN EYE FOR DETAIL </strong>THAT SETS US
+                    APART FROM OTHER DESIGN FIRMS.
+                </p>
+                <p class="masked">
+                    WITH OVER A DECADE OF EXPERIENCE IN THE INDUSTRY,
+                    OUR TEAM OF EXPERTS HAS HONED THEIR SKILLS AND
+                    DEVELOPED A <strong class="text-primary"> KEEN EYE FOR DETAIL </strong>THAT SETS US
+                    APART FROM OTHER DESIGN FIRMS.
+                </p>
             </div>
         </div>
     </div>
@@ -45,37 +61,37 @@
             <h3 class="work-heading">History</h3>
             <div class="">
                 <div class="d-flex text-group material-bubble p-5  align-items-center">
-                    <h4 class="list-small">NOW</h4>
+                    <h4 class="split-line">+15K</h4>
                     <div class=" ms-5 d-flex flex-column">
-                        <h5>Design Lead</h5>
-                        <h5 class="masked">Self-Lead Designer</h5>
-                        <p>Fantasy Interactive </p>
+                        <h5 class="split-line">PROJECTS</h5>
+                        <h5 class="masked">PROJECTS</h5>
+                        <!-- <p>Fantasy Interactive </p> -->
                     </div>
                 </div>
                 <div class="d-flex  text-group material-bubble p-5  align-items-center">
-                    <h4 class="list-small">2016</h4>
+                    <h4 class="split-line">+3K</h4>
                     <div class="d-flex ms-5 flex-column">
-                        <h5>Senior Product Designer</h5>
-                        <h5 class="masked">Regular Web Designer</h5>
-                        <p> Interactive Labs</p>
+                        <h5 class="split-line">CLIENTS</h5>
+                        <h5 class="masked">CLIENTS</h5>
+                        <!-- <p> Interactive Labs</p> -->
                     </div>
                 </div>
                 <div class="d-flex text-group material-bubble p-5  align-items-center">
-                    <h4 class="list-small">2012</h4>
+                    <h4 class="split-line">+10K</h4>
                     <div class="d-flex text-start ms-5 flex-column">
-                        <h5>Art Director</h5>
-                        <h5 class="masked">Photoshop doodler</h5>
-                        <p> DR Com Group</p>
+                        <h5 class="split-line">COUNTRIES</h5>
+                        <h5 class="masked">COUNTRIES</h5>
+                        <!-- <p> DR Com Group</p> -->
                     </div>
                 </div>
-                <div class="d-flex text-group material-bubble p-5  align-items-center">
+                <!-- <div class="d-flex text-group material-bubble p-5  align-items-center">
                     <h4 class="list-small">2009</h4>
                     <div class="d-flex ms-5 flex-column">
                         <h5>Flash Designer</h5>
                         <h5 class="masked">Jurassic Designer</h5>
                         <p> DR Com Group</p>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -86,47 +102,75 @@
 
 
     <div class="row justify-content-center  align-items-center clients">
-        <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
-            <h3 class="about-heading">clients</h3>
-            <div class="split-lines" [innerHtml]="clients">
+        <div class="col-md-10 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+            <h3 class="about-heading">OUR DESIGN PHILOSOPH</h3>
+            <div class="split-lines">
+                <p class= "split-line not-masked mb-4">
+                    <strong class="text-primary">WE BELIEVE</strong> THAT DESIGN SHOULD BE BOTH BEAUTIFUL
+                    AND FUNCTIONAL. OUR PHILOSOPHY IS CENTERED
+                    AROUND CREATING DESIGNS THAT<strong class="text-primary"> NOT ONLY LOOK GREAT BUT ALSO SERVE A
+                        PURPOSE.
+                    </strong>
+                </p>
+                <p class="split-line not-masked">
+                    WE WORK CLOSELY WITH OUR CLIENTS TO UNDERSTAND
+                    THEIR GOALS AND OBJECTIVES, AND WE USE THIS
+                    INFORMATION TO CREATE DESIGNS THAT EFFECTIVELY
+                    COMMUNICATE THEIR MESSAGE TO THEIR AUDIENCE.
+                </p>
+
+
+                <p class=" masked mb-4">
+                    <strong class="text-primary">WE BELIEVE</strong> THAT DESIGN SHOULD BE BOTH BEAUTIFUL
+                    AND FUNCTIONAL. OUR PHILOSOPHY IS CENTERED
+                    AROUND CREATING DESIGNS THAT<strong class="text-primary"> NOT ONLY LOOK GREAT BUT ALSO SERVE A
+                        PURPOSE.
+                    </strong>
+
+                </p>
+                <p class="masked">
+                    WE WORK CLOSELY WITH OUR CLIENTS TO UNDERSTAND
+                    THEIR GOALS AND OBJECTIVES, AND WE USE THIS
+                    INFORMATION TO CREATE DESIGNS THAT EFFECTIVELY
+                    COMMUNICATE THEIR MESSAGE TO THEIR AUDIENCE.
+                </p>
             </div>
         </div>
-
     </div>
     <div class="row justify-content-center what-do position-relative overflow-hidden  align-items-center">
         <div class="client"></div>
         <div class="col-md-10  client-list">
             <div class="">
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4 class="">FORD</h4>
+                    <h4 >FORD</h4>
                     <p class="text-hidden  ">Working on the Next-Generation HMI Experience without no driving
                         experience.
                     </p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4 class="">UFC</h4>
+                    <h4 >UFC</h4>
                     <p class="text-hidden">Developed the Future of UFC Sports Ecosystem despite not being a sports fan.
                     </p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4 class="">LINCOLN</h4>
+                    <h4 >LINCOLN</h4>
                     <p class="text-hidden ">Defined the visual concept and design language for the Lincoln Zephyr 2022
                         but never seen it in real life.</p>
                 </div>
                 <div
                     class="d-flex text-group material-bubble text-nowrap  py-2 justify-content-between align-items-center">
-                    <h4 class="">ROYAL CARIBBEAN</h4>
+                    <h4 >ROYAL CARIBBEAN</h4>
                     <p class="text-hidden text-wrap">I was just one person on a massive team that created an entire
                         Royal
                         Caribbean eco-system.</p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center ">
-                    <h4>SLEEPIQ</h4>
+                    <h4 >SLEEPIQ</h4>
                     <p class="text-hidden">Designed a 1M+ users product utilizing my best personal experience: sleeping.
                     </p>
                 </div>
                 <div class="d-flex text-group material-bubble  py-2 justify-content-between align-items-center">
-                    <h4 class="">NFL</h4>
+                    <h4 >NFL</h4>
                     <p class="text-hidden">Explored the Future of Fantasy Football while being in a country where
                         football means a total different sport.
                     </p>
@@ -140,9 +184,50 @@
         </div>
     </div>
     <div class="row justify-content-center  align-items-center video-container">
-        <video class="video px-0 w-100" autoplay loop muted id="scaled-video">
-            <source src="../../assets/video/mixkit-animation-of-futuristic-devices-99786.mp4" type="video/mp4">
+        <video class="video px-0 w-100" autoplay loop  id="scaled-video">
+            <source src="../../assets/video/motage.mp4" type="video/mp4">
         </video>
+    </div>
+    <div class="row justify-content-center  align-items-center pricing">
+        <div class="col-md-10 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+            <h3 class="about-heading">OUR PRICING AND PACKAGES</h3>
+            <div class="split-lines">
+                <p class="split-line not-masked mb-4">
+                    WE OFFER A RANGE OF PRICING AND PACKAGE OPTIONS
+                    TO FIT EVERY BUDGET AND DESIGN NEED.
+                </p>
+                <p class="split-line not-masked mb-4">
+                    OUR PRICING <strong class="text-primary"> IS TRANSPARENT AND COMPETITIVE </strong>, WITH
+                    NO HIDDEN FEES OR SURPRISES.
+                </p>
+                <p class="split-line not-masked mb-4">
+                    WE WORK CLOSELY WITH OUR CLIENTS TO UNDERSTAND
+                    THEIR DESIGN GOALS AND CREATE CUSTOMIZED
+                    PACKAGES THAT MEET THEIR SPECIFIC NEEDS. WHETHER
+                    YOU'RE LOOKING FOR A ONE-TIME PROJECT OR ONGOING
+                    DESIGN SUPPORT, WE HAVE A PACKAGE THAT'S RIGHT
+                    FOR YOU.
+                </p>
+
+
+                <p class="masked mb-4">
+                    WE OFFER A RANGE OF PRICING AND PACKAGE OPTIONS
+                    TO FIT EVERY BUDGET AND DESIGN NEED.
+                </p>
+                <p class="masked mb-4">
+                    OUR PRICING <strong class="text-primary"> IS TRANSPARENT AND COMPETITIVE </strong>, WITH
+                    NO HIDDEN FEES OR SURPRISES.
+                </p>
+                <p class="masked mb-4">
+                    WE WORK CLOSELY WITH OUR CLIENTS TO UNDERSTAND
+                    THEIR DESIGN GOALS AND CREATE CUSTOMIZED
+                    PACKAGES THAT MEET THEIR SPECIFIC NEEDS. WHETHER
+                    YOU'RE LOOKING FOR A ONE-TIME PROJECT OR ONGOING
+                    DESIGN SUPPORT, WE HAVE A PACKAGE THAT'S RIGHT
+                    FOR YOU.
+                </p>
+            </div>
+        </div>
     </div>
     <app-testimonials></app-testimonials>
 </section>

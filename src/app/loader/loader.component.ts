@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-loader',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoaderComponent implements OnInit {
 percent :number=0;
 showLoader:boolean=true;
+startWebpage:boolean=true;
+@Output() loader = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
@@ -19,5 +21,8 @@ if(this.percent == 100) {
 }
     }, 25.5);
   }
-
+  startProject(){
+    this.startWebpage=false;
+    this.loader.emit(false);
+  }
 }

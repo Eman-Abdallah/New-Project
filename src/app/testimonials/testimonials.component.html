@@ -6,15 +6,15 @@
         <ng-template swiperSlide>
           <div class="first d-flex align-items-start gap-3">
             <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
-            <div>
-              <h5 class="mb-4">
+            <div >
+              <h5 class="mb-4 split-line">
                 Minh is seriously <br>
                 the best and he <br>
                 never complain
               </h5>
-              <h6 class="name">Michael Glass</h6>
-              <h6>Group Design Director</h6>
-              <h6>Fantasy Interactive</h6>
+              <h6 class="name split-line">Michael Glass</h6>
+              <h6 class="split-line">Group Design Director</h6>
+              <h6 class="split-line">Fantasy Interactive</h6>
             </div>
           </div>
         </ng-template>
@@ -22,14 +22,14 @@
           <div class="first d-flex align-items-start gap-3">
             <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
             <div>
-              <h5 class="mb-4">
+              <h5 class="mb-4 split-line">
                 This looks <br>
                 amazing. <br>
                 great work!
               </h5>
-              <h6 class="name">Peter Smart</h6>
-              <h6>Head Of Product</h6>
-              <h6>Fantasy Interactive</h6>
+              <h6 class="name split-line">Peter Smart</h6>
+              <h6 class="split-line">Head Of Product</h6>
+              <h6 class="split-line">Fantasy Interactive</h6>
             </div>
           </div>
         </ng-template>
@@ -37,14 +37,14 @@
           <div class="first d-flex align-items-start gap-3">
             <img src="../../assets/images/quotation-mark-svgrepo-com.svg" alt="quotation-mark" width="50px">
             <div>
-              <h5 class="mb-4">
+              <h5 class="mb-4 split-line">
                 He's a beast. <br>
                 his skills are <br>
                 insane!
               </h5>
-              <h6 class="name">Linh Le</h6>
-              <h6>Project Manager</h6>
-              <h6>Interactive Labs</h6>
+              <h6 class="name split-line">Linh Le</h6>
+              <h6 class="split-line">Project Manager</h6>
+              <h6 class="split-line">Interactive Labs</h6>
             </div>
           </div>
         </ng-template>
@@ -79,10 +79,41 @@
   </div>
 
 </div>
-   <section class="row justify-content-center   align-items-center motto" id="contact">
-  <div class="col-md-8 text" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
-    <h3 class="about-heading">MY MOTTO</h3>
-    <div class="split-lines" [innerHtml]="motto"></div>
-    <h3 class="about-heading">{{name}}</h3>
+   <section class="row   align-items-center motto" id="contact">
+  <div class="col-md-8 text ps-5" (mouseover)="handleTextHover()" (mouseout)="removeClass()">
+    <h3 class="about-heading text-start">WHY CHOOSE US?</h3>
+    <div class="split-lines" >
+      <p class="  masked mb-4">
+        OUR TEAM OF <strong class="text-primary">EXPERT DESIGNERS</strong>
+        HAS YEARS OF EXPERIENCE
+        CREATING EFFECTIVE DESIGNS FOR
+        A WIDE RANGE OF INDUSTRIES.
+      
+    </p>
+      <p class=" masked">
+        WE STAY UP-TO-DATE ON THE LATEST
+        DESIGN TRENDS AND TECHNOLOGY,
+        SO YOU CAN <strong class="text-primary"> BE SURE </strong> YOUR
+        DESIGNS ARE FRESH, MODERN, AND
+        EFFECTIVE
+      
+    </p>
+    <p class=" not-masked mb-4">
+      OUR TEAM OF <strong class="text-primary">EXPERT DESIGNERS</strong>
+      HAS YEARS OF EXPERIENCE
+      CREATING EFFECTIVE DESIGNS FOR
+      A WIDE RANGE OF INDUSTRIES.
+    
+  </p>
+    <p class=" not-masked">
+      WE STAY UP-TO-DATE ON THE LATEST
+      DESIGN TRENDS AND TECHNOLOGY,
+      SO YOU CAN <strong class="text-primary"> BE SURE </strong> YOUR
+      DESIGNS ARE FRESH, MODERN, AND
+      EFFECTIVE
+    
+  </p>
+    </div>
+    <!-- <h3 class="about-heading">{{name}}</h3> -->
   </div>
 </section>

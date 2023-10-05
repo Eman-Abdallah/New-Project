@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import gsap from 'gsap';
+import  ScrollTrigger  from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 
 @Component({
   selector: 'app-about',
@@ -6,34 +9,60 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  aboutText: string = `
-  <p class="line">I’m a <strong class="text-primary">selectively skilled</strong>  product</p> 
-  <p class="line"> designer with strong focus on </p>
-  <p class="line"> producing high quality & </p>
-  <p class="line">impactful digital experience.</p>
-`
-
+  typeSplit:any;
+  elementRef: any;
   constructor() { }
 
   ngOnInit(): void {
   }
   handleTextHover() {
-    this.aboutText = `
-    A visual  <strong >Designer-with skills</strong>  that <br>
-    haven't been replaced by A.I <br>
-    (yet)-making good shit only if   <br>
-    the paycheck is equally good.
-  `
-    document.querySelector('.circle')?.classList.add('circle-hovered');
+
+    document.querySelector('.ball')?.classList.add('ball-hovered');
   }
   removeClass() {
-    document.querySelector('.circle')?.classList.remove('circle-hovered');
-    this.aboutText = `
- I’m a <strong class="text-primary">selectively skilled</strong>  product <br>
- designer with strong focus on <br>
- producing high quality & <br>
- impactful digital experience.
- `
+    document.querySelector('.ball')?.classList.remove('ball-hovered');
 
-  }
+}
+ngAfterViewInit() {
+  this.runSplit();
+  this.createAnimation();
+}
+
+runSplit() {
+  this.typeSplit = new SplitType('.split-line', {
+    types: 'lines, words'
+  });
+}
+
+createAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+  const lines = document.querySelectorAll('.line');
+
+  lines.forEach((line: any) => {
+    const lineMaskElement = document.createElement('div');
+    lineMaskElement.classList.add('line-mask');
+    line.appendChild(lineMaskElement);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: line,
+        start: 'top center',
+        end: 'bottom center',
+        scrub: 1
+      }
+    });
+
+    tl.to(line.querySelector('.line-mask'), {
+      width: '0%',
+      duration: 1
+    });
+  });
+}
+
+
+handleWindowResize() {
+  this.typeSplit.revert();
+  this.runSplit();
+}
+
 }

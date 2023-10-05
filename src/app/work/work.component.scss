@@ -3,10 +3,11 @@
 .work {
   padding-bottom: 150px;
   transition: all 1s ease-in-out;
-
+  background-color: #060606;
   // height: 100vh;
   .what-do {
     padding: 150px 0;
+    background-color: #0A0A0A;
   }
 
   .experience {
@@ -20,6 +21,7 @@
     position: relative;
     z-index: 100;
     cursor: context-menu;
+    mix-blend-mode: difference;
   }
 
   h4 {
@@ -136,35 +138,69 @@
   height: 100vh;
   background-size: cover;
   transition: all 1s ease-in-out;
-
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: #101010;
+    opacity: 0.65;
+  }
   h3 {
     font-size: 15px;
     letter-spacing: 7px;
     text-transform: uppercase;
+    mix-blend-mode: difference;
   }
 
 }
 
 .history {
   padding-top: 100px;
+  background-color: #0A0A0A;
+  // h4{
+  //   font-size: 9rem;
+  //   font-weight: bold;
+  // }
 }
-
+.pricing{
+  padding-top: 300px;
+}
 .split-lines {
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: bold;
   display: block;
   color: $light;
   position: relative;
   z-index: 100;
   transition: all 1s ease-in-out;
+  mix-blend-mode: difference;
+  .not-masked{
+    display: block;
+}
+.masked{
+    display: none;
+}
+&:hover{
+.not-masked{
+    display: none;
+}
+.masked{
+    display: block;
+}
+}
 }
 
 
-.clients {
+.clients,.pricing {
   height: 100vh;
+  padding-top: 100px;
 }
-
+.pricing{
+  padding-top: 350px;
+}
 .client {
   position: absolute;
   width: 100%;
@@ -194,8 +230,8 @@
 
   .video {
     height: 100%;
-    transform: scale(0.8);
-    z-index: -1;
+    transform: scale(0.6);
+    // z-index: -1;
 
     &.scaled-video {
       transform: scale(1.3);
@@ -232,10 +268,36 @@
   }
 }
 
+
+@media screen and(max-width:1200px) {
+.clients,.pricing{
+  .split-lines{
+    font-size: 2.5rem;
+  }
+}
+.pricing{
+  padding-top: 100px;
+}
+}
+@media screen and(max-width:800px) {
+h4{
+  font-size: 5rem !important;
+}
+.clients,.pricing{
+  .split-lines{
+    font-size: 2.1rem;
+  }
+}
+.client-list{
+  h4{
+    font-size: 3rem !important;
+  }
+}
+}
 @media screen and(max-width:500px) {
   .work {
     h4 {
-      font-size: 4rem;
+      font-size: 3rem !important;
     }
 
     h5 {
@@ -243,12 +305,12 @@
     }
 
     .split-lines {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
 
     .client-list {
       h4 {
-        font-size: 2.5rem;
+        font-size: 2rem !important;
       }
 
       p {

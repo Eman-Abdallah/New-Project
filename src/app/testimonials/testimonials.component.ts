@@ -26,10 +26,10 @@ export class TestimonialsComponent implements OnInit {
     <p class="line"> is good </p>
   `;
     this.name = 'Minh Pham'
-    document.querySelector('.circle')?.classList.add('circle-hovered');
+    document.querySelector('.ball')?.classList.add('ball-hovered');
   }
   removeClass() {
-    document.querySelector('.circle')?.classList.remove('circle-hovered');
+    document.querySelector('.ball')?.classList.remove('ball-hovered');
     this.motto = `
  <p class="line"> GOOD DESIGN</p>
   <p class="line"> IS HONEST</p>
