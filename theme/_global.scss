@@ -78,6 +78,12 @@ body{
     width: 100%;
     z-index: 2;
   }
+  .motto{
+    .line-mask {
+        background-color:#010101;
+    
+  }
+}
   .material-bubble{
     &:hover{
         h4.split-line{        
@@ -90,11 +96,7 @@ body{
         
     }
   }
-  .experience{
-    .line-mask{
-        background-color: #1C1C1C;
-    }
-  }
+
 @media screen and(max-width:800px) {
     .mySwiper{
         margin-top: -201px;

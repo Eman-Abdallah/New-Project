@@ -54,7 +54,7 @@ createAnimation() {
 
     tl.to(line.querySelector('.line-mask'), {
       width: '0%',
-      duration: 1
+      duration: 1.5
     });
   });
 }
